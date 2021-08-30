@@ -1,0 +1,22 @@
+{
+  "name": "botatta",
+  "version": "1.0.0",
+  "description": "a bot called atta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hat-im/botatta.git"
+  },
+  "author": "abhik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hat-im/botatta/issues"
+  },
+  "homepage": "https://github.com/hat-im/botatta#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  }
+}
