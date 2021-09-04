@@ -1,14 +1,24 @@
 const { Client, Intents } = require('discord.js');
 const { token } = require('./config.json');
 
-const client = new Client({intents: [Intents.FLAGS.GUILDS,8]});
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
-client.once('ready', c => {
-	console.log("oowwee im up");
+client.once('ready', () => {
+	console.log('Ready!');
 });
 
-client.on("messageCreate", function(message){
-    console.log(`message is created -> ${message}`);
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isCommand()) return;
+
+	const { commandName } = interaction;
+
+	if (commandName === 'ping') {
+		await interaction.reply('Pong!');
+	} else if (commandName === 'server') {
+		await interaction.reply(`Server name: ${interaction.guild.name}\nTotal members: ${interaction.guild.memberCount}`);
+	} else if (commandName === 'user') {
+		await interaction.reply(`Your tag: ${interaction.user.tag}\nYour id: ${interaction.user.id}`);
+	}
 });
 
 client.login(token);
