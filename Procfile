@@ -1,1 +1,1 @@
-worker: npm bot/index.js
+worker: npm .

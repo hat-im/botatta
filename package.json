@@ -2,7 +2,7 @@
   "name": "botatta",
   "version": "1.0.0",
   "description": "a bot called atta",
-  "main": "index.js",
+  "main": "bot\\index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/hat-im/botatta#readme",
   "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@discordjs/voice": "^0.6.0",
+    "discord-api-types": "^0.22.0",
     "discord.js": "^13.1.0"
   }
 }
